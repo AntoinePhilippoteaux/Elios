@@ -26,6 +26,10 @@
             favorites = [...favorites, profession];
         }
     }
+    
+    function removeFromFavorites(profession) {
+        favorites = favorites.filter(fav => fav.id !== profession.id);
+    }
   </script>
   
   <svelte:head>
@@ -33,7 +37,7 @@
     <meta name="description" content="Explore different professions" />
   </svelte:head>
   
-  <section>
+<section>
     <h1>Explorez les Métiers</h1>
     <div class="cards">
         {#each professions as profession}
@@ -51,11 +55,11 @@
                     </div>
                 </div>
                 <button class="like-btn" on:click={() => addToFavorites(profession)}>J'aime</button>
-                <button class="dislike-btn">Je n'aime pas</button>
+                <button class="dislike-btn" on:click={() => removeFromFavorites(profession)}>Je n'aime pas</button>
             </div>
         {/each}
     </div>
-  </section>
+</section>
   
   <section>
     <h1>Favoris</h1>
