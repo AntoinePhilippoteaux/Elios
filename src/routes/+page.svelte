@@ -14,7 +14,7 @@
   <section class="hero">
     <div class="hero-content">
         <img src="/images/LOGO BLANC-02.png" alt="Elios Logo" class="logo" />
-        <h1>Bienvenue sur Elios Nine</h1>
+        <h1>Bienvenue sur Elios</h1>
         <p>Le Tinder de l'orientation qui utilise l'intelligence artificielle pour affiner vos choix et trouver votre voie.</p>
         <button class="find-your-path" on:click={findYourPath}>Find your Path</button>
     </div>
